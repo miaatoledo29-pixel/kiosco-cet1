@@ -20,6 +20,7 @@ def inicializar_bd():
         )
     ''')
     
+    
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS productos (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -43,6 +44,8 @@ def inicializar_bd():
     
     conexion.commit()
     conexion.close()
+
+    
 
 def cargar_menu_kiosco():
     conexion = sqlite3.connect(DB_NAME)
